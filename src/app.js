@@ -35,6 +35,12 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(Cors());
 
+
+app.use(Cors({
+    origin: 'https://dazzling-kashata-1b7bc6.netlify.app/'
+}));
+
+
 app.get("/", (req, res) => {
     res.send("api working");
 })
