@@ -34,7 +34,7 @@ app.use(morgan("dev"));
 
 // CORS Configuration
 app.use(Cors({
-    origin: 'https://strong-dasik-1e1278.netlify.app', // Your Netlify site URL
+    origin: 'https://peppy-salamander-5a1eb7.netlify.app/', // Your Netlify site URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
 }));
