@@ -32,12 +32,13 @@ const app = express();
 app.use(express.json());
 app.use(morgan("dev"));
 
-// CORS Configuration
 app.use(Cors({
-    origin: '*', // Your Netlify site URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    origin: 'https://peppy-salamander-5a1eb7.netlify.app', // Your Netlify URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     credentials: true,
 }));
+
+app.options('*', Cors()); 
 
 app.get("/", (req, res) => {
     res.send("API is working");
