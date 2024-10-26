@@ -37,8 +37,10 @@ app.use(Cors());
 
 
 app.use(Cors({
-    origin: 'https://dazzling-kashata-1b7bc6.netlify.app/'
+    origin: ['https://dazzling-kashata-1b7bc6.netlify.app'], // No trailing slash
+    credentials: true // Optional, if you need to include cookies in requests
 }));
+
 
 
 app.get("/", (req, res) => {
