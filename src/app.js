@@ -60,3 +60,7 @@ app.use(ErrorMiddleware);
 app.listen(port, () => {
     console.log(`Server is working on http://localhost:${port}`);
 })
+
+
+
+//MONGO_URI = mongodb://localhost:27017/Shopping for mongodb compass
