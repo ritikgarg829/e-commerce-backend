@@ -35,6 +35,15 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(Cors());
 
+app.use(Cors({
+    origin: 'https://your-netlify-site.netlify.app', // replace with your actual Netlify URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+}));
+
+
+
+
 app.get("/", (req, res) => {
     res.send("api working");
 })
